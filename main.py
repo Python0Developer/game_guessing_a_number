@@ -1,0 +1,14 @@
+import random
+def guess(y):
+      random_number = random.randint(1, y)
+      guess=0
+      while guess != random_number:
+          guess=int(input(f"guess a number between 1 and {y}:"))
+          if guess < random_number:
+              print("Too low")
+          elif guess > random_number:
+              print('Too High')
+
+      print(f"You have guessed the right number {random_number}")
+
+guess(13)
